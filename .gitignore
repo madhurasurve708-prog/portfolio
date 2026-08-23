@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# System / Agent caches
+.gemini/
+.agents/
+.idea/
+.vscode/
