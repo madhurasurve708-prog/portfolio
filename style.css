@@ -517,6 +517,91 @@ header {
     color: var(--text-primary);
 }
 
+/* --- Profile Card Styling --- */
+.profile-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.profile-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.05);
+}
+
+.profile-img-container {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+    display: block;
+}
+
+.profile-card:hover .profile-img {
+    transform: scale(1.03);
+}
+
+.profile-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-emerald);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px var(--accent-emerald);
+    position: relative;
+}
+
+.status-indicator::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--accent-emerald);
+    border-radius: 50%;
+    animation: pulse-glow 2s infinite ease-out;
+}
+
+@keyframes pulse-glow {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
 .learning-box {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
